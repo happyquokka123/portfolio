@@ -20,7 +20,7 @@ export default function About() {
                 </div>
                 <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start items-center text-left mb-16 md:mb-0">
                     <h1 className="text-slate-800 mb-4 text-2xl md:text-4xl font-semibold align-top">
-                        Hey there, I'm Happy Quokka! 👋🏻
+                        Hey there, I'm happyquokka! 👋🏻
                     </h1>
                     <p className="mb-8">
                         I'm an aspiring software engineer, passionate about bridging the gap between 
