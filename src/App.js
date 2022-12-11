@@ -1,24 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Redesign from "./pages/Redesign";
+import JamzFindz from "./pages/JamzFindz";
+import Personas from "./pages/Personas";
+import Hello from "./pages/Hello";
+import About from "./pages/About";
+import NoPage from "./pages/NoPage";
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
+
+  const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router basename={process.env.PUBLIC_URL}>
+      <Navbar />
+      <Routes>
+          <Route path='/' element={<Home scrollToTop={scrollToTop} />} />
+          <Route path="/redesign" element={<Redesign scrollToTop={scrollToTop} />} />
+          <Route path="/jamz-findz" element={<JamzFindz scrollToTop={scrollToTop} />} />
+          <Route path="/personas" element={<Personas scrollToTop={scrollToTop} />} />
+          <Route path="/hello" element={<Hello scrollToTop={scrollToTop} />} />
+          <Route path="/about" element={<About scrollToTop={scrollToTop} />} />
+          <Route path="*" element={<NoPage />} />
+      </Routes>
+      <Footer/>
+    </Router>
   );
 }
 
