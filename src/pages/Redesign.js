@@ -113,6 +113,7 @@ function Redesign() {
                         </ul>
                     </div>
                     <br/>
+                    {/* Swiper component from swiperjs.com */}
                     <Swiper
                         // install Swiper modules
                         modules={[Navigation, Pagination, A11y, Autoplay]}

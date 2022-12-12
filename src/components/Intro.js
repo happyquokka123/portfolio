@@ -9,6 +9,7 @@ export default function Intro() {
                 <h1 className="text-gray-700 mb-4 text-4xl md:text-5xl font-bold">
                     Hi, I'm happyquokka! 👋🏻
                 </h1>
+                {/* TypeAnimation component from react-type-animation */}
                 <TypeAnimation
                     sequence={[
                         'a curious designer', 
